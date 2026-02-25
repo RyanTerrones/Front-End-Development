@@ -1,0 +1,22 @@
+<h2>Presidents</h2>
+
+<ul>
+    <!--old way of iterating a collection-->
+    <li *ngFor="let president of presidents">
+        {{president}}
+    </li>
+</ul>
+
+<!--For loop that is tracking (object)presidents names-->
+<ol>
+    @for(president of presidents; track president){
+        <li>{{president}}</li>
+    }
+</ol>
+
+<!--For loop that is tracking (object)presidents names and terms-->
+<ul>
+    @for(president of myPresidents; track president.name){
+    <li>{{president.name}}, {{president.term}}</li>
+    }
+</ul>
